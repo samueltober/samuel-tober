@@ -24,7 +24,7 @@ menu:
     url: '/categories'
     type: 'categories'
   - title: 'About'
-    url: 'about.md'
+    url: '/about.md'
     submenu:
       - title: 'Code Highlighter'
         url: '/intro/code-highlighting-post/'
