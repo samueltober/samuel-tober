@@ -94,4 +94,12 @@ Secondly, as mentioned above, I averaged the Poisson deviance over 6 cross valid
 | --------------------|:-------------:|  :-------------:           |
 | Average deviance    | 0.255         | 0.253                      |
 
+## Conlcusions
+
+### Variable Importance
+Firstly, neither model considers the accommodation type as an important feature, having the lowest relative importance for both models. Secondly, both models consider the age of the insured to be an important variable. Thirdly, regarding the number of people in the household, both the decision tree and the gradient boosting machine agree that this variable is relatively important. 
+
+### Deviance
+The cross-validation results show that the gradient boosting machine on average has the best predicitve performance. Even though the difference in average deviance between the two models looks miniscule, a slight improvement could lead to large business value.  Although the simple decision tree has worse performance than the gradient boosting machine, it has the advantage of being simple, very fast to train and easily interpretable. According to the European Union General Data Protection Regulation (GDPR), in the context of automated decision-making, the data subject should have the right to obtain an explanation of the decision reached, therefore it is important to be able to understand, interpret and evaluate the models that are built.
+
 
