@@ -121,7 +121,9 @@ $$M^{filter}_{F,4} = \begin{bmatrix}F_{11} & F_{21} & F_{31} & F_{41} & F_{12} &
 
 which, using some notation, can be simplified to:
 
-$$M^{filter}_{F,4} = \begin{bmatrix}\leftarrow v^T \rightarrow & 0_4^T & 0_4^T \end{bmatrix}$$
+$$M^{filter}_{F,4} = \begin{bmatrix}\leftarrow v^T \rightarrow & 0_4^T & 0_4^T \\  0_4^T & \leftarrow v^T \rightarrow & 0_4^T \\ 0_4^T & 0_4^T & \leftarrow v^T \rightarrow \end{bmatrix}$$
+
+where $$v^T = flatten(F)$$ and $$0_4^T$$ is a row vector of 4 zeros. This pattern can then be extended a $$X$$ with arbitrary dimensions. 
 
 
 ## Derivations of Gradients
