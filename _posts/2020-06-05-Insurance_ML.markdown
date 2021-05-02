@@ -43,7 +43,7 @@ There are obvious advantages of decision trees, such as their interpretability a
 
 J. Friedman introduced gradient boosting in his 1999 paper. The general problem of predictive modelling is, as we now know, to find a function $f(\bm{x})$ to predict a response variable y from a set of explanatory variables x, which minimises some loss function $$\mathcal{L}(f(x), y)$$. Gradient boosting is considered a gradient descent algorithm, meaning it relies on iterative tuning of parameters in order to achieve the minimium of a specified loss function.
 
-In boosting, $f(x)$ is estimated by an expansion of the form:
+In boosting, $$f(x)$$ is estimated by an expansion of the form:
 \begin{equation}
     \hat{f}(x) = \sum_{m=0}^M \beta_m h(x, a_m)        
 \end{equation}
@@ -56,4 +56,15 @@ Now, as insurace claims are rather rare per exposure the data is very skewed:
 <img src="https://samueltober.github.io/samuel-tober/images/Number_of_claims.png" >
 
 This can become a problem as the model might learn to only predict a frequency of zero, however we also want to capture the attributes of those customers that do not have any claims. One approach to this problem is to view the task as a binary classification task at first, where zero claims and > 0 claims are seperated. Subsequently, a regression model can be fit on the > 0 class. In my work, I decided to downsample the data according to the minority class as the amount of data was very large. I also investigated a technique called SMOTE (https://arxiv.org/pdf/1106.1813.pdf) for upsampling the minority class. 
+
+### Outliers
+For the all-risk cover, only claims that have a severity of50,000SEK or lessare covered by the insurance. Therefore, all values above 50,000 were set to 50,000. More-over, there were several faulty observations, such as negative claims, which were omitted.
+
+### Uncertain data
+In paying a claim there are three important quantities, the amountincurred but not reported (IBNR), the amount reported but not settled (RBNS) and theamount that has been paid to the customer. The insurance company will reserve moneyto cover the RBNS and the IBNR, and after the claim has been made by the insured thisreserve will start being paid out to the customer until the claim is closed.There is a certain uncertainty in the RBNS, which could be an issue. Therefore the datawas truncated so that the fraction of RBNS was relatively low.
+
+<img src="https://samueltober.github.io/samuel-tober/images/Insurance_period.png" >
+
+### Missing values
+Rows containing missing values where removed only if they were missingfor an important feature or for one of the response variables, as most model implemen-tations cannot deal with missing values. This of course reduces the amount of data, butgiven the size of the data set this is not a great loss. After the data preparation, around140,000observations were lef
 
