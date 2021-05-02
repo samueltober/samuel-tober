@@ -18,3 +18,8 @@ $$\begin{enumerate}[nosep]
     \item Frequency (F) - number of claims per exposure time
     \item Severity (S) - average loss per claim
 \end{enumerate}$$
+
+where exposure is the time for which a risk is insured. Now, assume that an insurer has a total loss of $L$ spread out over $N$ claims and an exposure $e$. Then the effective, or technical premium would be:
+$$\begin{equation}
+    \tau = \mathbb{E}\left(\frac{L}{e}\right) = \mathbb{E}\left(\frac{L}{N} \lvert N >0\right) \times \mathbb{E}\left(\frac{N}{e}\right) = \mathbb{E}\left(S\right) \times \mathbb{E}\left(F\right)
+\end{equation}$$
