@@ -83,7 +83,7 @@ The forward pass of the CNN is quite simple: Firstly we convolve the input tenso
     s = W @ flatten(x)
     p = Softmax(s)
     
-where * denotes the convolution operation and @ normal matrix multiplication. Once we have the probabilites p, the predicted class and loss can easily be calcluated and used in the backward pass. Note that I in this implementation have ignored the bias term as well as pooling layers. 
+where * denotes the convolution operation and @ normal matrix multiplication. I will cover how I implemented the convolution operation in the final section. Once we have the probabilites p, the predicted class and loss can easily be calcluated and used in the backward pass. Note that I in this implementation have ignored the bias term as well as pooling layers. 
 
 ### Backward-pass
 Typically a CNN is trained using normal backpropagation, and here, in order to propagate the error, one has to compute the gradients with respect to both the filters and the weights connecting the fully connected layer (note that if one uses bias in the fully connected layer, of course the gradient with respect to this bias also has to be computed). The gradients are computed analytically as a numerical implementation would be far slower, this can be quite cumbersome but it is definetly worth it in terms of efficiency gains. I present a full derivation of the gradients in the final section, for those who are interested. 
@@ -98,9 +98,20 @@ To investigate whether the very skewed original data set had any effect on the n
 I trained the network through 20 000 update steps, one update step being one update of the gradients, and the tracked the validation and training loss and accuracy every 50th update step. Moreover, I utilized early stopping to ensure that the model corresponding to the validation loss minimum is saved. Using 2 convolutional layers with 50 filters each, a learning rate of 0.01, momentum term of 0.9 and batch size of 100, the final validation accuracy was 53% on the balanced data, and 47% on the unbalanced data. In the figure below the loss is plotted per 10 update steps.
 
 ## Evaluating the Network's Performance
-To Evaluate the CNN I generated confusion matrices and calculated the F-score
+To Evaluate the CNN I generated confusion matrices and calculated the F-score for both the balanced and unbalanced data sets.
 
 ## Final Remarks
+
+# Appendix
+
+## Convolution using Matrix Multiplication
+To make the back-propagation algorithm transparent and relatively efficient(as I ran this on CPU not a GPU and to take computational advantage of the sparse input data) we will set up the convolutions per-formed as matrix multiplications. In the following I will show how you can set up the appropriate matrix based on the entries of the applied for a small example. Let X be a 4 x 4 input matrix and F be a 4 x 2 filter:
+
+$$X = \begin{bmatrix}X_{11} & X_{12} & X_{13} & X_{14} \\ X_{21} & X_{22} & X_{23} & X_{24} \\ X_{31} & X_{32} & X_{33} & X_{34} \\ X_{41} & X_{42} & X_{43} & X_{44}\end{bmatrix}$$
+
+$$F = \begin{bmatrix}F_{11} & F_{12} \\ F_{21} & F_{22} \\ F_{31} & F_{32} \\ F_{41} & F_{42}\end{bmatrix}$$
+
+
 
 ## Derivations of Gradients
 
