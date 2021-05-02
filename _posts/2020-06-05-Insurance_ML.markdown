@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title:  "Using Gradient Boosting Machines to Model Risk Premiums"
 subtitle: "a comparative study of risk premium models"
 date:   2020-06-05 21:49:05 +0200
