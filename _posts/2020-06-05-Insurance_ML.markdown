@@ -29,3 +29,9 @@ Where we have assumed independence between the frequency and severity. By this r
 One common type of ML model is the decision tree, introduced by Breiman et al. in 1984, which is a very intuitive and natural model for us humans as it in a way mimics the way we make decisions. A decision tree divides the predictor space into a number of exhaustive and non-overlapping subsets, with a fitted response for each subset. As such, using a indicator function each input can be mapped to a response depending on what subset the input lands in. A very simple example of a decision tree can be seen in the figure below:
 
 <img src="https://samueltober.github.io/samuel-tober/images/Decision_tree_example.png" >
+
+The most common way to train a decision tree is through the CART algorithm which essentially minimizes two terms when dividing the predictor space:
+
+\begin{equation}
+    \sum_{j=1}^{J}\left[\sum_{\bm{x_i}\in R_j} \mathcal{L}(y_i, \hat{y_{R_j}})\right] + \text{cp}\cdot J\sum_{\bm{x_i} \in R}\mathcal{L}(y_i, \hat{y}_R)
+\end{equation}
