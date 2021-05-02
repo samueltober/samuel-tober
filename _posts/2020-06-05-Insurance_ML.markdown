@@ -42,3 +42,10 @@ where the first term ensures a good fit and the second reduces overfitting accor
 There are obvious advantages of decision trees, such as their interpretability and the fact that they can combine both continuous and discrete data. However, they also have their limitations. For one, single decision trees tend to have a rather high variance and can be very sensitive to the training data.  In order to counteract this shortcoming, so called ensemble methods can be used, in which multiple weak models are aggregated into a more powerful predictor. I focused on the gradient boosting machine in this work as it has received the most praise for its predicitve performance. 
 
 J. Friedman introduced gradient boosting in his 1999 paper. The general problem of predictive modelling is, as we now know, to find a function $f(\bm{x})$ to predict a response variable y from a set of explanatory variables x, which minimises some loss function $$\mathcal{L}(f(x), y)$$. Gradient boosting is considered a gradient descent algorithm, meaning it relies on iterative tuning of parameters in order to achieve the minimium of a specified loss function.
+
+In boosting, $f(x)$ is estimated by an expansion of the form:
+\begin{equation}
+    \hat{f}(x) = \sum_{m=0}^M \beta_m h(x, a_m)        
+\end{equation}
+
+where the base learners $$h(x, a_m)$$ are usually chosen to be simple functions with parameters a. Both a and $$\beta$$ are fitted to the training data in a step-wise manner.
