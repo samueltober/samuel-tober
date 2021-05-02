@@ -85,5 +85,13 @@ With these features, I trained a simple decision tree model and a gradient boost
 ## Results
 Firstly, I evaluated the variable importance of the independent variables for each of the two models using the average of the optimal parameters found using the cross-validation scheme. Below are the results for each model.
 
-<img src="https://samueltober.github.io/samuel-tober/images/Insurance_period.png" >
+<img src="https://samueltober.github.io/samuel-tober/images/Var_imp_tree.png" >    
+<img src="https://samueltober.github.io/samuel-tober/images/Var_imp_gbm.png" >
+
+Secondly, as mentioned above, I averaged the Poisson deviance over 6 cross validation folds to see which model had the best performance:
+
+| Fold                | Decision tree | Gradient boosting machine  |
+| --------------------|:-------------:|  -------------:            |
+| Average deviance    | 0.255         | 0.253                      |
+
 
