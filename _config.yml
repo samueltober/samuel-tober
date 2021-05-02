@@ -24,17 +24,12 @@ menu:
     url: '/categories'
     type: 'categories'
   - title: 'About'
-    url: '/about.md'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
+    url: '/about'
+    type: 'about'
 
 # Owner/author information
 owner:
   name:           Samuel Tober
-  site:           http://aronbordin.com
   avatar:         images/avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
   email:          samuel2@kth.se
