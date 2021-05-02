@@ -23,8 +23,8 @@ menu:
   - title: 'Categories'
     url: '/categories'
     type: 'categories'
-  - title: 'Favorites'
-    url: '#'
+  - title: 'About'
+    url: 'about.md'
     submenu:
       - title: 'Code Highlighter'
         url: '/intro/code-highlighting-post/'
