@@ -73,7 +73,7 @@ Before we try can train the CNN, we have to decide on a loss function. In this p
 \end{equation}
 where $$p$$ is the vector of class probabilities resulting from a forward pass through the entire network, and $$y$$ is the one-hot encoding of the label as described in the section above. 
 
-### Forward Pass
+### Forward-pass
 The forward pass of the CNN is quite simple: Firstly we convolve the input tensor through a set of convolutional layers $$\{F_i\}__i^{N_F}$$, and secondly we multiply the output from the convolutional layers with a weight matrix, $$W$$:
 
     set x <- X
@@ -83,9 +83,9 @@ The forward pass of the CNN is quite simple: Firstly we convolve the input tenso
     s = W @ flatten(x)
     p = Softmax(s)
     
-where * denotes the convolution operation and @ normal matrix multiplication. Once we have the probabilites p, the predicted class and loss can easily be calcluated and used in the backward pass.
+where * denotes the convolution operation and @ normal matrix multiplication. Once we have the probabilites p, the predicted class and loss can easily be calcluated and used in the backward pass. Note that I in this implementation have ignored the bias term as well as pooling layers. 
 
-### Gradients
+### Backward-pass
 Typically a CNN is trained using normal backpropagation, and here, in order to propagate the error, one has to compute the gradients with respect to both the filters and the weights connecting the fully connected layer (note that if one uses bias in the fully connected layer, of course the gradient with respect to this bias also has to be computed). The gradients are computed analytically as a numerical implementation would be far slower, this can be quite cumbersome but it is definetly worth it in terms of efficiency gains. I present a full derivation of the gradients in the final section, for those who are interested. 
 
 ### Optimization Scheme
