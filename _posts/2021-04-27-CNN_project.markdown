@@ -117,7 +117,7 @@ where $$M^{filter}_{F,4}$$ is 3 x 16 and the subscript 4 denotes the number of r
 The latter is needed to specify the number of columns in $$M^{filter}_{F,4}$$ given the
 width of F. Thus, 
 
-$$M^{filter}_{F,4} = \begin{bmatrix}F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\ \end{bmatrix}$$
+$$M^{filter}_{F,4} = \begin{bmatrix}F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\ 0 & 0 & 0 & F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} \end{bmatrix}$$
 
 
 ## Derivations of Gradients
