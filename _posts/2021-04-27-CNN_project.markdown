@@ -74,7 +74,7 @@ Before we try can train the CNN, we have to decide on a loss function. In this p
 where $$p$$ is the vector of class probabilities resulting from a forward pass through the entire network, and $$y$$ is the one-hot encoding of the label as described in the section above. 
 
 ### Forward-pass
-The forward pass of the CNN is quite simple: Firstly we convolve the input tensor through a set of convolutional layers $$\{F_i\}__i^{N_F}$$, and secondly we multiply the output from the convolutional layers with a weight matrix, $$W$$:
+The forward pass of the CNN is quite simple: Firstly we convolve the input tensor through a set of convolutional layers $$F_i$$, $$i = 1,2,3,...$$, and secondly we multiply the output from the convolutional layers with a weight matrix, $$W$$:
 
     set x <- X
     for F_i in Filters do: 
