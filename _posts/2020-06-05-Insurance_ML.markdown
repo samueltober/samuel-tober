@@ -58,13 +58,25 @@ Now, as insurace claims are rather rare per exposure the data is very skewed:
 This can become a problem as the model might learn to only predict a frequency of zero, however we also want to capture the attributes of those customers that do not have any claims. One approach to this problem is to view the task as a binary classification task at first, where zero claims and > 0 claims are seperated. Subsequently, a regression model can be fit on the > 0 class. In my work, I decided to downsample the data according to the minority class as the amount of data was very large. I also investigated a technique called SMOTE (https://arxiv.org/pdf/1106.1813.pdf) for upsampling the minority class. 
 
 ### Outliers
-For the all-risk cover, only claims that have a severity of50,000SEK or lessare covered by the insurance. Therefore, all values above 50,000 were set to 50,000. More-over, there were several faulty observations, such as negative claims, which were omitted.
+For the all-risk cover, only claims that have a severity of 50,000SEK or less are covered by the insurance. Therefore, all values above 50,000 were set to 50,000. Moreover, there were several faulty observations, such as negative claims, which were omitted.
 
 ### Uncertain data
-In paying a claim there are three important quantities, the amountincurred but not reported (IBNR), the amount reported but not settled (RBNS) and theamount that has been paid to the customer. The insurance company will reserve moneyto cover the RBNS and the IBNR, and after the claim has been made by the insured thisreserve will start being paid out to the customer until the claim is closed.There is a certain uncertainty in the RBNS, which could be an issue. Therefore the datawas truncated so that the fraction of RBNS was relatively low.
+In paying a claim there are three important quantities, the amount incurred but not reported (IBNR), the amount reported but not settled (RBNS) and the amount that has been paid to the customer. The insurance company will reserve money to cover the RBNS and the IBNR, and after the claim has been made by the insured this reserve will start being paid out to the customer until the claim is closed. There is a certain uncertainty in the RBNS, which could be an issue. Therefore the data was truncated so that the fraction of RBNS was relatively low.
 
 <img src="https://samueltober.github.io/samuel-tober/images/Insurance_period.png" >
 
 ### Missing values
-Rows containing missing values where removed only if they were missingfor an important feature or for one of the response variables, as most model implemen-tations cannot deal with missing values. This of course reduces the amount of data, butgiven the size of the data set this is not a great loss. After the data preparation, around140,000observations were lef
+Rows containing missing values where removed only if they were missing for an important feature or for one of the response variables, as most model implementations cannot deal with missing values. This of course reduces the amount of data, but given the size of the data set this is not a great loss. After the data preparation, around 140,000 observations were left.
+
+## Modelling
+I decided to keep it relatively simple in this project and used only 4 explanatory variables:
+
+| Variable Name       | Description  |
+| --------------------|:-------------:|
+| NO_CLAIM_NOT_NULL   | Number of claims |
+| EXP_COV             | Exposure measured in years      |
+| AGE_INSUR_PERS      | Age of the insurance taker      |
+| NO_INSUR            | Number of people in the insured property      |
+| ACCOM_TYPE_NAME     | Type of property      |
+| LIVE_AREA           | The total surface area of the property      |
 
