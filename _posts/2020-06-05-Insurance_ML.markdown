@@ -91,7 +91,7 @@ Firstly, I evaluated the variable importance of the independent variables for ea
 Secondly, as mentioned above, I averaged the Poisson deviance over 6 cross validation folds to see which model had the best performance:
 
 | Fold                | Decision tree | Gradient boosting machine  |
-| --------------------|:-------------:|  -------------:            |
+| --------------------|:-------------:|  :-------------:           |
 | Average deviance    | 0.255         | 0.253                      |
 
 
