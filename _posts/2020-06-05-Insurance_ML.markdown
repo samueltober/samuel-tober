@@ -9,7 +9,7 @@ categories: Projects
 usemathjax: true
 ---
 
-This is a project I did for a swedish insurance company, with the goal to make their pricing strategy more competitive using machine learning. As the insurance industry is highly data driven it is no surprise that machine learning (ML) has made its way into the industry. While GLMs are still the comfort zone of most actuaries, we have in recent years seen a surge in machine learning algorithms. This study puts focus on developing and evaluating three tree-based machine learning models, starting from simple decision trees and working up to the more advanced ensemble methods random forests and gradient boosting machines.
+This is a project I did for a swedish insurance company, with the goal to make their pricing strategy for a home insurance product more competitive using machine learning. As the insurance industry is highly data driven it is no surprise that machine learning (ML) has made its way into the industry. While GLMs are still the comfort zone of most actuaries, we have in recent years seen a surge in machine learning algorithms. This study puts focus on developing and evaluating three tree-based machine learning models, starting from simple decision trees and working up to the more advanced ensemble methods random forests and gradient boosting machines.
 
 ## Insurance Pricing Fundamentals
 First, it is important to understand why setting a premium that rightfully corresponds to the risk of the customer is so crucial for the insurer. We will highlight this with a simple example. Assume two insurers, A and B, exist and A has a low premium relative to the risk of loss, while B has an adequate premium in relation to the risk. In this scenario, a high risk customers would opt for A since their premium is relatively low compared to B, thus A would attract high risk customers and in effect see their margins being eaten up. On the contrary, if A's premiums are too high they would not attract any profitable customers and still lose money. In the light of this simple example, we see why a competitive pricing strategy is paramount. Perhaps, the most common pricing strategy is the frequency-severity strategy. In the frequency-severity model we assume that two factors will influence the risk of a customer:
@@ -79,4 +79,11 @@ I decided to keep it relatively simple in this project and used only 4 explanato
 | NO_INSUR            | Number of people in the insured property      |
 | ACCOM_TYPE_NAME     | Type of property      |
 | LIVE_AREA           | The total surface area of the property      |
+
+With these features, I trained a simple decision tree model and a gradient boosting machine using the CART algorithm. Moreover, I ran a extensive cross validation scheme to optimize the hyperparameters of the models. Using an average over the cross validation folds I obtained the optimal models that I finally tested against each other. 
+
+## Results
+Firstly, I evaluated the variable importance of the independent variables for each of the two models using the average of the optimal parameters found using the cross-validation scheme. Below are the results for each model.
+
+<img src="https://samueltober.github.io/samuel-tober/images/Insurance_period.png" >
 
