@@ -53,6 +53,9 @@ Now, as some of you might know a CNN takes a matrix as input, and so far we have
  
 With this encoding, the whole data set can be represented by one matrix $$X$$ of size $$(M_{\text{max}} \times V) \times N$$, where $$N$$ is the number of names in the data set. Similarly, we encode the country label using one hot encoding and concatenate all the country labels into a matrix $$Y$$ of size $$L \times N$$ where $$L$$ is the number of unique labels in the data set.
 
+### Dealing With Unbalanced Data
+There are a few ways in which one can mitigate the problem of unbalanced classes in a classification setting. Perhaps the most straight forward and simple way is to downsample the data according to the number of data points in the minority class, that is, if the minority class contains $$n$$ data points, we randomly sample $$n$$ rows from all classes and use this as our training data. It may seem that with this approach, we are discarding a lot of data, however, if one performs this sampling each epoch and trains the network for enough epochs, the network will have been trained on most of the original data; we are just ensuring that each time the model is shown a set of data points, the corresponding classes are uniformly distributed. 
+
 ## An Overview of CNNs
 CNNs suit themselves best to solving problems where the input data is in the form of a tensor, which is one of the reasons they have found a lot of popularity in tasks where the input consists of visualy imagery. Moreover, CNNs are shift invariant which in non-technical terms means that it does not matter where, in say for example an image, a feauture is, the network will still recognize this as the same feature. This is an especially desired property in image classification, but perhaps not so relevant in the task we have at hand. 
 
@@ -78,13 +81,16 @@ Typically a CNN is trained using normal backpropagation, and here, in order to p
 There are many options when it comes to how exactly the loss surface is traversed to find minimas of the loss function, one typically controls this process through the learning rate $$\eta$$, momentum, mini-batch training etc... I decided to use momentum and perform the gradient descent in mini-batches, i.e. to divide the input data set into smaller size batches and perform backpropagtion on these. With these choices, there are effectively five hyper-parameters: $$\eta$$, the mini-batch size, the momentum term ($$\rho$$), the number of filters per layer and the filter widths. As always, these parameters are best selected through a grid search. 
 
 ### The Influence of Unbalanced Data
-To investigate whether the very skewed original data set had any effect on the network's performance, I compared two models: One trained on the original data set, and one trained on a data set that I had downsampled prior to training. Here one has to be careful as to what metrics to use when comparing the two models, when dealing with unbalanced data a single accuracy for the whole data set might not be the best option. In this project I opted for confusion matrices and F-score as my primary evaluation metric. More on this later. 
+To investigate whether the very skewed original data set had any effect on the network's performance, I compared two models: One trained on the original data set, and one trained on a data set that I had downsampled prior to training. Here one has to be careful as to what metrics to use when comparing the two models, when dealing with unbalanced data a single accuracy for the whole data set might not be the best option as a model that solely predicts the majority class will have a high accuracy while not being a good model. In this project I opted for confusion matrices and F-score as my primary evaluation metric as these give a more complete picture of the model performance. More on this later. 
 
 ### Results of Training
+I trained the network through 20 000 update steps, one update step being one update of the gradients, and the tracked the validation and training loss and accuracy every 50th update step. Moreover, I utilized early stopping to ensure that the model corresponding to the validation loss minimum is saved. Using 2 convolutional layers with 50 filters each, a learning rate of 0.01, momentum term of 0.9 and batch size of 100, the final validation accuracy was 53% on the balanced data, and 47% on the unbalanced data. In the figure below the loss is plotted per 10 update steps.
 
 ## Evaluating the Network's Performance
 
 ## Final Remarks
+
+## Derivations
 
 
 
