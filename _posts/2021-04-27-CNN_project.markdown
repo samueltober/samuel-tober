@@ -77,8 +77,11 @@ where $$p$$ is the vector of class probabilities resulting from a forward pass t
 The forward pass of the CNN is quite simple: Firstly we convolve the input tensor through a set of convolutional layers $$\{F_i\}__i^{N_F}$$, and secondly we multiply the output from the convolutional layers with a weight matrix, $$W$$:
 
     set x <- X
-    for $$F_i$$ in $$\{F_i\}__i^{N_F}$$ do: 
-        x = max(0, X * $$F_i$$)
+    for F_i in Filters do: 
+        x = max(0, X * F_i)
+        
+    s = Wflatten(x)
+    p = Softmax(s)
 
 ### Gradients
 Typically a CNN is trained using normal backpropagation, and here, in order to propagate the error, one has to compute the gradients with respect to both the filters and the weights connecting the fully connected layer (note that if one uses bias in the fully connected layer, of course the gradient with respect to this bias also has to be computed). The gradients are computed analytically as a numerical implementation would be far slower, this can be quite cumbersome but it is definetly worth it in terms of efficiency gains. I present a full derivation of the gradients in the final section, for those who are interested. 
