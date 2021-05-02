@@ -107,9 +107,11 @@ To Evaluate the CNN I generated confusion matrices and calculated the F-score fo
 ## Convolution using Matrix Multiplication
 To make the back-propagation algorithm transparent and relatively efficient(as I ran this on CPU not a GPU and to take computational advantage of the sparse input data) we will set up the convolutions per-formed as matrix multiplications. In the following I will show how you can set up the appropriate matrix based on the entries of the applied for a small example. Let X be a 4 x 4 input matrix and F be a 4 x 2 filter:
 
-$$X = \begin{bmatrix}X_{11} & X_{12} & X_{13} & X_{14} \\ X_{21} & X_{22} & X_{23} & X_{24} \\ X_{31} & X_{32} & X_{33} & X_{34} \\ X_{41} & X_{42} & X_{43} & X_{44}\end{bmatrix}$$
+$$X = \begin{bmatrix}X_{11} & X_{12} & X_{13} & X_{14} \\ X_{21} & X_{22} & X_{23} & X_{24} \\ X_{31} & X_{32} & X_{33} & X_{34} \\ X_{41} & X_{42} & X_{43} & X_{44}\end{bmatrix}$$, $$F = \begin{bmatrix}F_{11} & F_{12} \\ F_{21} & F_{22} \\ F_{31} & F_{32} \\ F_{41} & F_{42}\end{bmatrix}$$
 
-$$F = \begin{bmatrix}F_{11} & F_{12} \\ F_{21} & F_{22} \\ F_{31} & F_{32} \\ F_{41} & F_{42}\end{bmatrix}$$
+When we convolve X with F (stride 1 and no zero-padding), the output vector has size 3 x 1:
+
+$$s = X * F \implies s = M^{filter}_{F,4}$$
 
 
 
