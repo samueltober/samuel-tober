@@ -1,36 +1,16 @@
 ---
 layout: page
 title: About
-share: true
 ---
 
-# Neo-HPSTR Jekyll Theme
+My name is Samuel Tober, and I am a Msc. student in computer science at the Royal Institute of Technology (KTH) in Stockholm, Sweden. For a living, I work as a data analyst within insurance, mainly focusing on risk premium modelling, machine learning and data engineering. I am passionate about data science, mathematics, and technology in general. I spend most of my spare time climbing and playing the piano (not at the same time though!). I use this website to document my projects, as a set of tutorials on various subjects that I find interesting, and as my personal journal. My goal is to not always write about technology related matters, but also to touch on other topics. I hope you find something of value!
 
-Neo-HPSTR Jekyll is a responsive and modern blog template.
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-# Live Demo
-
-You can see it running [here](http://blog.rhesoft.com/) and [here](http://aronbordin.com/neo-hpstr-jekyll-theme/).
-
-
-## What Neo-HPSTR brings to the table:
-
-* Modern design.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet topbar animated menu with support for drop-downs.
-* Optional [Disqus](http://disqus.com) comments and social sharing links.
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
-* Author panel, with social links
-* Read more tag support(similar with Wordpress ).
-
-![Preview](http://aronbordin.com/images/neo-hpstr-jekyll-theme-preview.png)
-
-
----
-
-## Getting Started
-
-Neo-HPSTR takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
+<img src="https://samueltober.github.io/my-blog/assets/images/me.png" alt="drawing" width="500" style="width:50%;"/> 
