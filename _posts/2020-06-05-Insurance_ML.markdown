@@ -36,7 +36,7 @@ The most common way to train a decision tree is through the CART algorithm which
     \sum_{j=1}^{J}\left[\sum_{x_i\in R_j} \mathcal{L}(y_i, \hat{y_{R_j}})\right] + \text{cp}\cdot J\sum_{x_i \in R}\mathcal{L}(y_i, \hat{y}_R)
 \end{equation}
 
-where the first term ensures a good fit and the second reduces overfitting according to the constant cp, with cp = 1 resulting in a tree without splits and cp = 0 a maximally deep tree. The parameter cp is most commonly done through cross validation.
+where the first term ensures a good fit and the second reduces overfitting according to the constant cp, with cp = 1 resulting in a tree without splits and cp = 0 a maximally deep tree. The parameter cp is most commonly done through cross validation. Moreover, the loss function can be chosen depending on the context, in this case we are dealing with Poisson distributed claims data, so the Poisson deviance is appropriate.
 
 ## Ensemble Methods
 There are obvious advantages of decision trees, such as their interpretability and the fact that they can combine both continuous and discrete data. However, they also have their limitations. For one, single decision trees tend to have a rather high variance and can be very sensitive to the training data.  In order to counteract this shortcoming, so called ensemble methods can be used, in which multiple weak models are aggregated into a more powerful predictor. I focused on the gradient boosting machine in this work as it has received the most praise for its predicitve performance. 
@@ -49,3 +49,11 @@ In boosting, $f(x)$ is estimated by an expansion of the form:
 \end{equation}
 
 where the base learners $$h(x, a_m)$$ are usually chosen to be simple functions with parameters a. Both a and $$\beta$$ are fitted to the training data in a step-wise manner.
+
+## The Data
+Now, as insurace claims are rather rare per exposure the data is very skewed:
+
+<img src="https://samueltober.github.io/samuel-tober/images/Number_of_claims.png" >
+
+This can become a problem as the model might learn to only predict a frequency of zero, however we also want to capture the attributes of those customers that do not have any claims. One approach to this problem is to view the task as a binary classification task at first, where zero claims and > 0 claims are seperated. Subsequently, a regression model can be fit on the > 0 class. In my work, I decided to downsample the data according to the minority class as the amount of data was very large. I also investigated a technique called SMOTE (https://arxiv.org/pdf/1106.1813.pdf) for upsampling the minority class. 
+
