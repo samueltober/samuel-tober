@@ -33,5 +33,12 @@ One common type of ML model is the decision tree, introduced by Breiman et al. i
 The most common way to train a decision tree is through the CART algorithm which essentially minimizes two terms when dividing the predictor space:
 
 \begin{equation}
-    \sum_{j=1}^{J}\left[\sum_{\bm{x_i}\in R_j} \mathcal{L}(y_i, \hat{y_{R_j}})\right] + \text{cp}\cdot J\sum_{\bm{x_i} \in R}\mathcal{L}(y_i, \hat{y}_R)
+    \sum_{j=1}^{J}\left[\sum_{x_i\in R_j} \mathcal{L}(y_i, \hat{y_{R_j}})\right] + \text{cp}\cdot J\sum_{x_i \in R}\mathcal{L}(y_i, \hat{y}_R)
 \end{equation}
+
+where the first term ensures a good fit and the second reduces overfitting according to the constant cp, with cp = 1 resulting in a tree without splits and cp = 0 a maximally deep tree. The parameter cp is most commonly done through cross validation.
+
+## Ensemble Methods
+There are obvious advantages of decision trees, such as their interpretability and the fact that they can combine both continuous and discrete data. However, they also have their limitations. For one, single decision trees tend to have a rather high variance and can be very sensitive to the training data.  In order to counteract this shortcoming, so called ensemble methods can be used, in which multiple weak models are aggregated into a more powerful predictor. I focused on the gradient boosting machine in this work as it has received the most praise for its predicitve performance. 
+
+J. Friedman introduced gradient boosting in his 1999 paper. The general problem of predictive modelling is, as we now know, to find a function $f(\bm{x})$ to predict a response variable y from a set of explanatory variables x, which minimises some loss function $$\mathcal{L}(f(x), y)$$. Gradient boosting is considered a gradient descent algorithm, meaning it relies on iterative tuning of parameters in order to achieve the minimium of a specified loss function.
