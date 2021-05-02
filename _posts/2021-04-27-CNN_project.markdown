@@ -114,8 +114,10 @@ When we convolve X with F (stride 1 and no zero-padding), the output vector has 
 $$s = X * F \implies s = M^{filter}_{F,4} @ flatten(X)$$
 
 where $$M^{filter}_{F,4}$$ is 3 x 16 and the subscript 4 denotes the number of rows in X.
-The latter is needed to specify the number of columns in  given the
+The latter is needed to specify the number of columns in $$M^{filter}_{F,4}$$ given the
 width of F. Thus, 
+
+$$M^{filter}_{F,4} = \begin{bmatrix}F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\ \end{bmatrix}$$
 
 
 ## Derivations of Gradients
