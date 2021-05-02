@@ -30,7 +30,7 @@ One common type of ML model is the decision tree, introduced by Breiman et al. i
 
 <img src="https://samueltober.github.io/samuel-tober/images/Decision_tree_example.png" >
 
-The most common way to train a decision tree is through the CART algorithm which essentially minimizes two terms when dividing the predictor space:
+The most common way to train a decision tree is through the CART algorithm which essentially minimizes two terms when dividing the predictor space $$R = \cup_{j=1}^{J}R_j$$:
 
 \begin{equation}
     \sum_{j=1}^{J}\left[\sum_{x_i\in R_j} \mathcal{L}(y_i, \hat{y_{R_j}})\right] + \text{cp}\cdot J\sum_{x_i \in R}\mathcal{L}(y_i, \hat{y}_R)
