@@ -76,8 +76,8 @@ where $$p$$ is the vector of class probabilities resulting from a forward pass t
 ### Forward Pass
 The forward pass of the CNN is quite simple: Firstly we convolve the input tensor through a set of convolutional layers $$\{F_i\}__i^{N_F}$$, and secondly we multiply the output from the convolutional layers with a weight matrix, $$W$$:
 
-   set x <- X
-   for $$F_i$$ in $$\{F_i\}__i^{N_F}$$ do: 
+    set x <- X
+    for $$F_i$$ in $$\{F_i\}__i^{N_F}$$ do: 
         x = max(0, X * $$F_i$$)
 
 ### Gradients
