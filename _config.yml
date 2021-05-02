@@ -31,7 +31,7 @@ menu:
 owner:
   name:           Samuel Tober
   avatar:         images/avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  bio:            "Msc. student in computer science at the Royal Institute of Technology (KTH) working as a data analyst. Passionate about piano and climbing. "
   email:          samuel2@kth.se
   # Twitter nick for use in Twitter cards and follow button.
   twitter: # if no twitter in this config, the twitter follow button will be removed
