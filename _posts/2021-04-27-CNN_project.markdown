@@ -111,7 +111,7 @@ $$X = \begin{bmatrix}X_{11} & X_{12} & X_{13} & X_{14} \\ X_{21} & X_{22} & X_{2
 
 When we convolve X with F (stride 1 and no zero-padding), the output vector has size 3 x 1:
 
-$$s = X * F \implies s = M^{filter}_{F,4}$$
+$$s = X * F \implies s = M^{filter}_{F,4} @ flatten(X)$$
 
 
 
