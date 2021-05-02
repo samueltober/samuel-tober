@@ -6,7 +6,7 @@ categories: Projects
 usemathjax: true
 ---
 
-Recently I built, trained and optimized a convolutional neural network (CNN) from scratch using Python with Numpy. In this post I will guide you through my work by explaining the architecture of CNNs, how I trained the CNN, and finally how I evaluated its performance. The aim for my CNN was to predict the country of origin for a given family name, i.e. we have a multi-class classification problem at hand. 
+Recently I built, trained and optimized a convolutional neural network (CNN) from scratch using Python with Numpy. In this post I will guide you through my work by explaining the architecture of CNNs, how I trained the CNN, and finally how I evaluated its performance. The aim for my CNN was to predict the country of origin for a given family name, i.e. we have a multi-class classification problem at hand. The code for this project can be found at: 
 
 ## Examining the Data and Encoding the Input
 
@@ -73,6 +73,13 @@ Before we try can train the CNN, we have to decide on a loss function. In this p
 \end{equation}
 where $$p$$ is the vector of class probabilities resulting from a forward pass through the entire network, and $$y$$ is the one-hot encoding of the label as described in the section above. 
 
+### Forward Pass
+The forward pass of the CNN is quite simple: Firstly we convolve the input tensor through a set of convolutional layers $$\{F_i\}__i^{N_F}$$, and secondly we multiply the output from the convolutional layers with a weight matrix, $$W$$:
+
+   set x <- X
+   for $$F_i$$ in $$\{F_i\}__i^{N_F}$$ do: 
+        x = max(0, X * $$F_i$$)
+
 ### Gradients
 Typically a CNN is trained using normal backpropagation, and here, in order to propagate the error, one has to compute the gradients with respect to both the filters and the weights connecting the fully connected layer (note that if one uses bias in the fully connected layer, of course the gradient with respect to this bias also has to be computed). The gradients are computed analytically as a numerical implementation would be far slower, this can be quite cumbersome but it is definetly worth it in terms of efficiency gains. I present a full derivation of the gradients in the final section, for those who are interested. 
 
@@ -86,10 +93,12 @@ To investigate whether the very skewed original data set had any effect on the n
 I trained the network through 20 000 update steps, one update step being one update of the gradients, and the tracked the validation and training loss and accuracy every 50th update step. Moreover, I utilized early stopping to ensure that the model corresponding to the validation loss minimum is saved. Using 2 convolutional layers with 50 filters each, a learning rate of 0.01, momentum term of 0.9 and batch size of 100, the final validation accuracy was 53% on the balanced data, and 47% on the unbalanced data. In the figure below the loss is plotted per 10 update steps.
 
 ## Evaluating the Network's Performance
+To Evaluate the CNN I generated confusion matrices and calculated the F-score
 
 ## Final Remarks
 
-## Derivations
+## Derivations of Gradients
+
 
 
 
