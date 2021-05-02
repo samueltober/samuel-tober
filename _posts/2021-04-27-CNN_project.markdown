@@ -119,6 +119,10 @@ width of F. Thus,
 
 $$M^{filter}_{F,4} = \begin{bmatrix}F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\ 0 & 0 & 0 & F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & F_{11} & F_{21} & F_{31} & F_{41} & F_{12} & F_{22} & F_{32} & F_{42} \end{bmatrix}$$
 
+which, using some notation, can be simplified to:
+
+$$M^{filter}_{F,4} = \begin{bmatrix}\leftarrow v^T \rightarrow & 0_4^T & 0_4^T \end{bmatrix}$$
+
 
 ## Derivations of Gradients
 
