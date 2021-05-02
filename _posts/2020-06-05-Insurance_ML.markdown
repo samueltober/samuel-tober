@@ -18,6 +18,12 @@ First, it is important to understand why setting a premium that rightfully corre
  * Severity (S) - average loss per claim
 
 where exposure is the time for which a risk is insured. Now, assume that an insurer has a total loss of $L$ spread out over $N$ claims and an exposure $e$. Then the effective, or technical premium would be:
+
 $$\begin{equation}
     \tau = \mathbb{E}\left(\frac{L}{e}\right) = \mathbb{E}\left(\frac{L}{N} \lvert N >0\right) \times \mathbb{E}\left(\frac{N}{e}\right) = \mathbb{E}\left(S\right) \times \mathbb{E}\left(F\right)
 \end{equation}$$
+
+Where we have assumed independence between the frequency and severity. By this reduction, insurance pricing becomes a problem of predicting $S$ and $F$. Be that as it may, in this case we will restrict our study to the frequency.
+
+## Modelling the Frequency Using Decision Trees
+One common type of ML model is the decision tree, introduced by Breiman et al. in 1984, which is a very intuitive and natural model for us humans as it in a way mimics the way we make decisions. A decision tree divides the predictor space into a number of exhaustive and non-overlapping subsets, with a fitted response for each subset. As such, using a indicator function each input can be mapped to a response depending on what subset the input lands in. A very simple example of a decision tree can be seen in the figure below:
