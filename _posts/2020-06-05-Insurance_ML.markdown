@@ -17,7 +17,7 @@ First, it is important to understand why setting a premium that rightfully corre
  * Frequency (F) - number of claims per exposure time
  * Severity (S) - average loss per claim
 
-where exposure is the time for which a risk is insured. Now, assume that an insurer has a total loss of $L$ spread out over $N$ claims and an exposure $e$. Then the effective, or technical premium would be:
+where exposure is the time for which a risk is insured. Now, assume that an insurer has a total loss of $$L$$ spread out over $$N$$ claims and an exposure $$e$$. Then the effective, or technical premium would be:
 
 $$\begin{equation}
     \tau = \mathbb{E}\left(\frac{L}{e}\right) = \mathbb{E}\left(\frac{L}{N} \lvert N >0\right) \times \mathbb{E}\left(\frac{N}{e}\right) = \mathbb{E}\left(S\right) \times \mathbb{E}\left(F\right)
@@ -101,5 +101,7 @@ Firstly, neither model considers the accommodation type as an important feature,
 
 ### Deviance
 The cross-validation results show that the gradient boosting machine on average has the best predicitve performance. Even though the difference in average deviance between the two models looks miniscule, a slight improvement could lead to large business value.  Although the simple decision tree has worse performance than the gradient boosting machine, it has the advantage of being simple, very fast to train and easily interpretable. According to the European Union General Data Protection Regulation (GDPR), in the context of automated decision-making, the data subject should have the right to obtain an explanation of the decision reached, therefore it is important to be able to understand, interpret and evaluate the models that are built.
+
+For a full report and code for this project please refer to this [link](https://github.com/samueltober/Insurance-ML).
 
 
