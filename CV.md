@@ -64,6 +64,8 @@ on Gjensidige’s home insurance data set
 * Had to deal with very unbalanced data when training the models
 * Evaluated the models’ predictive performance, as well as potential profitability
 
+For more info see: [**link**](https://github.com/samueltober/Insurance-ML)
+
 **Developing a Camera-based Method for Measuring Blood Pressure**
 
 Researched the possibility of using a video camera and image processing in Matlab to measure blood pressure non-invasively. The project was carried out at KTH School of Technology and Health.
