@@ -206,7 +206,7 @@ motivates the name.
 ## M-step
 The second step is to estimate the parameters given the sufficient
 statistics, i.e. the number of occurrences. In the case of fully
-observed data, this is done by simply computing $$\frac{M[a,u]}{M[u]}$$, where $$M[u] = \sum_{a}M[a,u] denotes the total number of occurrences of
+observed data, this is done by simply computing $$\frac{M[a,u]}{M[u]}$$, where $$M[u] = \sum_{a}M[a,u]$$ denotes the total number of occurrences of
 u. This gives a number between 0 and 1, and makes sure that the
 rows in each table sum to 1. Here we instead have expected sufficient
 statistics given the previous parameters, $$M_{\theta^{(t)}}$$, which are not necessarily
