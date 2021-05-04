@@ -144,3 +144,10 @@ with complete data is:
     l(\theta, D) = \sum_{\text{D}} \log{p(\text{Sum}, A, B|\theta)} = \sum_{\text{D}} \log{p(\text{Sum}, A, B, \theta)} + \log{p(A|\theta)} + \log{p(B|\theta)}
 \end{equation}
 
+However, with missing data (e.g. if B is missing), we need to sum out the missing
+variables, and get:
+
+\begin{equation}
+    l(\theta, D) = \sum_{\text{D}} \log{p(\text{Sum}, A|\theta)} = \sum_{\text{D}} \log{(\sum_{B}p(\text{Sum}|A, B, \theta)p(A|\theta)p(B|\theta))}
+\end{equation}
+
