@@ -69,7 +69,7 @@ for the dice. We could then make a number of experiments, and use the collected
 data to infer all the probabilities. Typically, we want to find the parameters $$\theta}$$
 (probabilities) that maximise the (log) likelihood of the observed data. Formally,
 if D is the dataset and $$\theta$$ are the values of the CPDs that we want to determine, the
-maximum likelihood solution is $$\theta$$ = argmax_{\theta}p(D|\theta). Due to the independences
+maximum likelihood solution is $$\theta = argmax_{\theta}p(D|\theta)$$. Due to the independences
 in Bayesian networks, the likelihood function can be decomposed so that we
 can treat parts of the graph independently. In essence, what we end up with is
 simply counting occurrences and using the frequencies as estimates.
