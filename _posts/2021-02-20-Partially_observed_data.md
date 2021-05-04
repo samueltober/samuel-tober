@@ -221,3 +221,37 @@ For nodes that do not have parent nodes, we divide by the total
 number of data points. This is the maximum likelihood estimate of
 the parameters given the expected sufficient statistics, which explains
 the name.
+
+We have now seen how the two steps work, and are almost ready to start coding.
+First we should just note how to start and how to end. In principle, we could
+start with either the E-step or the M-step. That is, we could either make an
+initial guess on the parameters (random or equal probabilities), and use these
+as $$\theta^{(0)}$$ in the first E-step. Alternatively, we could make an initial guess on the
+sufficient statistics (random assignment of all missing values, default values or soft
+assignments). Generating plausible parameters seems to be the most common
+approach, i.e. starting with the E-step. (In some cases, the initial parameters can be found from another algorithm, e.g. k-means to initialise Gaussian mixture
+models; or maximum likelihood on all complete data points.)
+
+How do we know how many iterations to run the EM algorithm? Again, there
+are multiple options. The simplest way is to use a fixed number of iterations, and
+hope that it converges in this time. Another approach would be to look at the
+change in parameters and stop when the change is below a certain threshold. In
+the same way, we could look at the expected sufficient statistics and stop when
+these do not differ much between two iterations. It is interesting to note that
+these two are not equivalent, meaning that there are cases when the parameters
+do not change much but the sufficient statistics do, and vice versa. Here, we
+should make one quick note about the issue of overfitting. As stated, each
+iteration of EM will increase the log likelihood, but only on the training data.
+There is no guarantee that it increases for a separate test set. This means that
+if we do too many iterations, we can eventually start overfitting to the training
+set and make the log likelihood of a test set decrease. To deal with this, one can
+employ any common regularisation technique, such as early stopping using a
+separate validation set, or averaging the parameters over multiple k-fold cross
+validation runs.
+
+# Using EM On a Simple V-structure
+The goal here will be to implement the E and M step of the
+algorithm. We will work with a 3 node network in a v-structure
+(X --> Z <-- Y). Each variable is binary, which means that in total there are 12 parameters. To
+simplify, our implementation will not be general, in that it will only work for
+our network.
