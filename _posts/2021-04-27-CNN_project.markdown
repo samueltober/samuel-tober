@@ -6,7 +6,7 @@ categories: Projects
 usemathjax: true
 ---
 
-Recently I built, trained and optimized a convolutional neural network (CNN) from scratch using Python with Numpy. In this post I will guide you through my work by explaining the architecture of CNNs, how I trained the CNN, and finally how I evaluated its performance. The aim for my CNN was to predict the country of origin for a given family name, i.e. we have a multi-class classification problem at hand. The code for this project can be found at: 
+Recently I built, trained and optimized a convolutional neural network (CNN) from scratch using Python with Numpy. In this post I will guide you through my work by explaining the architecture of CNNs, how I trained the CNN, and finally how I evaluated its performance. The aim for my CNN was to predict the country of origin for a given family name, i.e. we have a multi-class classification problem at hand. The code for this project can be found at: https://github.com/samueltober/CNN/tree/main.
 
 ## Examining the Data and Encoding the Input
 
