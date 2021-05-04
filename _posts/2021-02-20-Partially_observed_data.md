@@ -34,3 +34,22 @@ From this table we can read that $$p(B = 0|A = 0) = 0.3$$, $$p(B = 1|A = 0) = 0.
 etc. It can be observed that each value should be between 0 and 1, and each row needs to sum to 1, since the row sum is $$\sum_{b\in val(B)} p(B = b|Pa(B))$$, where
 val(B) denotes all possible values of B, and Pa(B) the parents of B.
 
+# Learning
+Learning generally means to infer some knowledge from given data. As described
+above, a Bayesian network consists of a graph (structure) and a table-CPD for
+each node (probabilities). Thus, we could imagine learning either the structure,
+the probabilities or both. Structure learning can be a significantly more difficult task, especially as the number of variables grows, since there is an exponential
+number of possible graphs that can represent the variables. Further, to decide
+which structure is best, we need to compare all structures - possibly removing
+some cases that deviate from prior knowledge too much - which in itself requires
+us to estimate the parameters for that given structure. That is, parameter
+estimation is a subtask of structure learning, and to keep this tutorial focused we
+will only cover parameter estimation. For small toy examples the “true” structure
+can often be known by reasoning about causality (we dodge the philosophical
+discussion on whether causality actually exists or not). As an example, imagine
+we roll two dice and record the individual values along with the sum. It is clear
+that the two dice do not influence each other, but that both influence the sum.
+And even though the sum can tell us something about the values of the dice (if
+the sum is low, each dice rolled low), it does not affect the rolls. The true graph
+is thus
+
