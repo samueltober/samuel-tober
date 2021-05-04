@@ -6,9 +6,6 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
 ---
 
-Samuel Tober
-============
-
 Education
 ---------
 
