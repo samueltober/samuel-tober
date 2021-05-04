@@ -23,7 +23,7 @@ Bayesian network we need to know the probability of each value given the values
 of parent nodes. These are stated in a table, an example of which is given below,
 where A is the only parent of B.
 
-|               | B = 0           | B = 1         |
+|     -         | B = 0           | B = 1         |
 |:-------------:| :-------------: |:-------------:| 
 |-----
 |A = 0          | 0.3             | 0.7           | 
@@ -52,4 +52,8 @@ that the two dice do not influence each other, but that both influence the sum.
 And even though the sum can tell us something about the values of the dice (if
 the sum is low, each dice rolled low), it does not affect the rolls. The true graph
 is thus
+
+<img src="https://samueltober.github.io/samuel-tober/images/diagram-20210504.png" >
+
+
 
