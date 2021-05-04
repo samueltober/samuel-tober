@@ -132,3 +132,15 @@ The two cases can be drawn as in the graph below. In  the  first  case,  content
 
 <img src="https://samueltober.github.io/samuel-tober/images/Grades.png" >
 
+Even if our data satisfy MAR, we still do not have a good way to do learning.
+Why can’t we use the same approach as with complete data? With complete
+data, the likelihood function decomposes into small parts, so that in the end
+we only need to compute frequencies. However, when we have missing data, we
+need to sum over all possible values of the missing variables. If we again consider
+the example with two dice and the sum, we have that the log-likelihood $$l(\theta, D)$$
+with complete data is:
+
+\begin{equation}
+    l(\theta, D) = \sum_{\text{D}} \log{p(\text{Sum}, A, B|\theta)} = \sum_{\text{D}} \log{p(\text{Sum}, A, B, \theta)} + \log{p(A|\theta)} + \log{p(B|\theta)}
+\end{equation}
+
