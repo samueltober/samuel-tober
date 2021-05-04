@@ -74,35 +74,16 @@ Report available at: [report](https://static1.squarespace.com/static/56b6357e01d
 580b8f70bebafb59fd876eb1/1477152642082/Samuel+Tober.pdf)
 
 Programming Languages
-:   **first-lang:** Here, we have an itemization, where we only want
-    to add descriptions to the first few items, but still want to
-    mention some others together at the end. A format that works well
-    here is a description list where the first few items have their
-    first word emphasized, and the last item contains the final few
-    emphasized terms. Notice the reasonably nice page break in the pdf
-    version, which wouldn't happen if we generated the pdf via html.
+:   **Python:** I have worked extensively with Python both professionally and in academic contexts. I have experience using Python for data science through Numpy, Pandas, sklearn and seaborn, but also for larger software projects. 
 
-:   **second-lang:** Description of your experience with second-lang,
-    perhaps again including a [link] [ref], this time placing the url
-    reference elsewhere in the document to reduce clutter (see source
-    file). 
+:   **SQL/SAS:** SQL and SAS is something I use almost everyday in my work at Gjensidige for querying from our large data tables. I am confident with writing complex queries and used to generate reports through SQL and SAS.
 
-:   **obscure-but-impressive-lang:** We both know this one's pushing
-    it.
+: **R:** R is another language I have used a lot in my work, I have built machine learning models, performed analysis of large sets of data and developed libraries of functions, among other things. 
 
-:   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
+:   Basic knowledge of **C**, ****
 
-[ref]: https://github.com/githubuser/superlongprojectname
 
-Extra Section, Call it Whatever You Want
-----------------------------------------
-
-* Human Languages:
-
-     * English (native speaker)
-     * ???
-     * This is what a nested list looks like.
-
-* Random tidbit
-
-* Other sort of impressive-sounding thing you did
+Languages
+* Swedish (native speaker)
+* English (Fluent)
+* Mandarin Chinese (A2 proficiency)
