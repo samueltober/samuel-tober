@@ -2,7 +2,7 @@
 layout: dark-post
 title:  "Convolutional Neural Network from Scratch"
 date:   2021-04-27 21:49:05 +0200
-categories: Data Science
+categories: Data-science
 usemathjax: true
 ---
 
