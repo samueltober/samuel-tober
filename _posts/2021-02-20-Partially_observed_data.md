@@ -28,3 +28,7 @@ where A is the only parent of B.
 |A = 0          | 0.3             | 0.7           | 
 |A = 1          | 0.8             | 0.2           | 
 
+From this table we can read that $$p(B = 0|A = 0) = 0.3$$, $$p(B = 1|A = 0) = 0.7$$
+etc. It can be observed that each value should be between 0 and 1, and each row needs to sum to 1, since the row sum is $$\sum_{b\in val(B)} p(B = b|Pa(B))$$, where
+val(B) denotes all possible values of B, and Pa(B) the parents of B.
+
