@@ -27,7 +27,7 @@ Education
 Experience
 ----------
 
-**Gjensidige Forsikring:**
+**Gjensidige Forsikring**
 
 Gjensidige is a leading Nordic insurance group listed on the Oslo Stock Exchange.
 
@@ -55,23 +55,23 @@ small scale race cars.
 
 *  Qualified to the most reputable race at Hockenheimring in Germany
 
-Technical Experience
+Projects
 --------------------
 
-My Cool Side Project
-:   For items which don't have a clear time ordering, a definition
-    list can be used to have named items.
+**Tree-based Machine Learning for Insurance Pricing**
 
-    * These items can also contain lists, but you need to mind the
-      indentation levels in the markdown source.
-    * Second item.
+As part of my bachelor thesis at Gjensidige I developed, tested and compared tree-based machine learning models
+on Gjensidige’s home insurance data set
 
-Open Source
-:   List open source contributions here, perhaps placing emphasis on
-    the project names, for example the **Linux Kernel**, where you
-    implemented multithreading over a long weekend, or **node.js**
-    (with [link](http://nodejs.org)) which was actually totally
-    your idea...
+* Performed feature engineering and cleaning of large amounts of data
+* Had to deal with very unbalanced data when training the models
+* Evaluated the models’ predictive performance, as well as potential profitability
+
+**Developing a Camera-based Method for Measuring Blood Pressure**
+Researched the possibility of using a video camera and image processing in Matlab to measure blood pressure non-invasively. The project was carried out at KTH School of Technology and Health.
+
+Report available at: [report](https://static1.squarespace.com/static/56b6357e01dbaea0266fe701/t/
+580b8f70bebafb59fd876eb1/1477152642082/Samuel+Tober.pdf)
 
 Programming Languages
 :   **first-lang:** Here, we have an itemization, where we only want
