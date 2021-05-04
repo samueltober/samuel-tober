@@ -66,7 +66,7 @@ img {
 In this case, the sum is deterministic given the dice rolls, but the same reasoning
 would go for a random variable. Imagine that we don’t know the probabilities
 for the dice. We could then make a number of experiments, and use the collected
-data to infer all the probabilities. Typically, we want to find the parameters $$\theta}$$
+data to infer all the probabilities. Typically, we want to find the parameters $$\theta$$
 (probabilities) that maximise the (log) likelihood of the observed data. Formally,
 if D is the dataset and $$\theta$$ are the values of the CPDs that we want to determine, the
 maximum likelihood solution is $$\theta = argmax_{\theta}p(D|\theta)$$. Due to the independences
