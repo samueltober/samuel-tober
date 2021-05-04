@@ -55,7 +55,7 @@ is thus
 
 <figure class="center">
 	<img src="https://samueltober.github.io/samuel-tober/images/diagram-20210504.png" >
-	<figcaption><a title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
+	<figcaption><a title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Graph for the dice sum model example</a>.</figcaption>
 </figure>
 
 In this case, the sum is deterministic given the dice rolls, but the same reasoning
