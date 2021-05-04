@@ -68,19 +68,21 @@ on Gjensidige’s home insurance data set
 * Evaluated the models’ predictive performance, as well as potential profitability
 
 **Developing a Camera-based Method for Measuring Blood Pressure**
+
 Researched the possibility of using a video camera and image processing in Matlab to measure blood pressure non-invasively. The project was carried out at KTH School of Technology and Health.
 
 Report available at: [report](https://static1.squarespace.com/static/56b6357e01dbaea0266fe701/t/
 580b8f70bebafb59fd876eb1/1477152642082/Samuel+Tober.pdf)
 
 Programming Languages
+
 :   **Python:** I have worked extensively with Python both professionally and in academic contexts. I have experience using Python for data science through Numpy, Pandas, sklearn and seaborn, but also for larger software projects. 
 
 :   **SQL/SAS:** SQL and SAS is something I use almost everyday in my work at Gjensidige for querying from our large data tables. I am confident with writing complex queries and used to generate reports through SQL and SAS.
 
 : **R:** R is another language I have used a lot in my work, I have built machine learning models, performed analysis of large sets of data and developed libraries of functions, among other things. 
 
-:   Basic knowledge of **C**, ****
+: I also have knowledge of **C** and **Java** through course work
 
 
 Languages
