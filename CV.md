@@ -6,29 +6,22 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
 ---
 
-Johnny Coder
+Samuel Tober
 ============
-
--------------------     ----------------------------
-1 MyAddress                        email@example.com
-MyTown 1000                          @twitter_handle
-MyCountry                           1800 my-phone-nr
--------------------     ----------------------------
 
 Education
 ---------
 
-2010-2014 (expected)
-:   **PhD, Computer Science**; Awesome University (MyTown)
+2020-2022 (expected)
+:   **Msc, Computer Science**; KTH Royal Institute of Technology, Stockholm
+* GPA: 4.7/5
 
-    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
-     Estimation Problem*
+2017-2020
+:   **BSc, Engineering Physics**; KTH Royal Institute of Technology, Stockholm
 
-2007-2010
-:   **BSc, Computer Science and Electrical Engineering**; University of
-    HomeTown (HomeTown)
+2019
+:   **Exchange semester**; Nanyang Technological University, Singapore
 
-    *Minor: Awesomeology*
 
 Experience
 ----------
