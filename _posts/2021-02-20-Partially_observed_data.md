@@ -53,7 +53,7 @@ And even though the sum can tell us something about the values of the dice (if
 the sum is low, each dice rolled low), it does not affect the rolls. The true graph
 is thus
 
-<figure class="half center">
+<figure class="center">
 	<img src="https://samueltober.github.io/samuel-tober/images/diagram-20210504.png" >
 	<figcaption><a title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
 </figure>
