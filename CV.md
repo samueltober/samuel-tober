@@ -74,13 +74,13 @@ Report available [**here**](https://static1.squarespace.com/static/56b6357e01dba
 Programming Languages
 --------------------
 
-:   **Python:** I have worked extensively with Python both professionally and in academic contexts. I have experience using Python for data science through Numpy, Pandas, sklearn and seaborn, but also for larger software projects. 
+**Python:** I have worked extensively with Python both professionally and in academic contexts. I have experience using Python for data science through Numpy, Pandas, sklearn and seaborn, but also for larger software projects. 
 
-:   **SQL/SAS:** SQL and SAS is something I use almost everyday in my work at Gjensidige for querying from our large data tables. I am confident with writing complex queries and used to generate reports through SQL and SAS.
+**SQL/SAS:** SQL and SAS is something I use almost everyday in my work at Gjensidige for querying from our large data tables. I am confident with writing complex queries and used to generate reports through SQL and SAS.
 
-: **R:** R is another language I have used a lot in my work, I have built machine learning models, performed analysis of large sets of data and developed libraries of functions, among other things. 
+**R:** R is another language I have used a lot in my work, I have built machine learning models, performed analysis of large sets of data and developed libraries of functions, among other things. 
 
-: I also have knowledge of **C** and **Java** through course work
+I also have knowledge of **C** and **Java** through course work
 
 
 Languages
