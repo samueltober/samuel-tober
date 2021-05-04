@@ -75,6 +75,7 @@ Report available [**here**](https://static1.squarespace.com/static/56b6357e01dba
 580b8f70bebafb59fd876eb1/1477152642082/Samuel+Tober.pdf)
 
 Programming Languages
+--------------------
 
 :   **Python:** I have worked extensively with Python both professionally and in academic contexts. I have experience using Python for data science through Numpy, Pandas, sklearn and seaborn, but also for larger software projects. 
 
@@ -86,6 +87,7 @@ Programming Languages
 
 
 Languages
+--------------------
 * Swedish (native speaker)
 * English (Fluent)
 * Mandarin Chinese (A2 proficiency)
