@@ -74,3 +74,33 @@ in Bayesian networks, the likelihood function can be decomposed so that we
 can treat parts of the graph independently. In essence, what we end up with is
 simply counting occurrences and using the frequencies as estimates.
 
+# Missing Data
+We say that we have missing, incomplete or partially observed data when we
+have datapoints for which some variables are not recorded. This could be due to
+human error (the variable was not recorded by mistake), the variable not being
+applicable (a patient did not take a certain medical test) or the variable not being
+directly measurable (these may or may not have a semantic interpretation, and
+are usually called latent variables). One way of handling these cases would be to
+simply ignore the missing cases, and do maximum likelihood on the observed
+data. This could be a valid approach if only little data is missing, otherwise
+we risk reducing the data a lot, which will lead to worse estimates. Another
+approach is to fill in missing values with default values or random values from
+a given distribution. If we have some prior knowledge on what these values or
+distributions could be, this might be okay, especially if only few data are missing.
+Otherwise, the estimates will be biased to whatever default values we use.
+
+An even bigger issue is that even if we have some clever way of handling missing
+data (such as expectation maximisation covered later), it could fail depending
+on the process that determines if a value is missing or not. If the process is
+independent of the data itself, then we are safe; otherwise we could be in trouble.
+
+A sufficient condition for when missing data is okay is that the process that
+determines whether data is missing or not is independent of the data - this is
+called missing completely at random (MCAR). This was the case in the first
+coin example. However, a weaker assumption is actually sufficient, namely that
+the process is independent of the missing values given the observed values - this
+is called missing at random (MAR). Consider an example where we have two
+coins, A and B, and every time B shows “head” we don’t record the value of A.
+Clearly, this is MAR but not MCAR. Sometimes, we can make the data MAR
+by adding more variables.
+
