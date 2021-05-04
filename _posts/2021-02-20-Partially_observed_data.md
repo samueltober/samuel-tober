@@ -51,9 +51,7 @@ we roll two dice and record the individual values along with the sum. It is clea
 that the two dice do not influence each other, but that both influence the sum.
 And even though the sum can tell us something about the values of the dice (if
 the sum is low, each dice rolled low), it does not affect the rolls. The true graph
-is thus
-
- a &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://samueltober.github.io/samuel-tober/images/diagram-20210504.png" >
+is thus: (Dice A) --> (Sum) <-- (Dice B).
 
 In this case, the sum is deterministic given the dice rolls, but the same reasoning
 would go for a random variable. Imagine that we don’t know the probabilities
