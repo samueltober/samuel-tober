@@ -3,7 +3,6 @@ layout: dark-post
 title:  "Fair, Accountable and Transparent Machine Learning"
 date:   2020-11-17 21:49:05 +0200
 categories: Essay
-usemathjax: true
 ---
 
 In this short paper I introduce the concept of Fair, Accountable and Transparent machine learning (FAT ML). I explain what the problems surrounding FAT ML are, 
