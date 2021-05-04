@@ -18,6 +18,7 @@ Education
 
 2017-2020
 :   **BSc, Engineering Physics**; KTH Royal Institute of Technology, Stockholm
+* GPA: 4.7/5
 
 2019
 :   **Exchange semester**; Nanyang Technological University, Singapore
@@ -26,20 +27,33 @@ Education
 Experience
 ----------
 
-**Your Most Recent Work Experience:**
+**Gjensidige Forsikring:**
 
-Short text containing the type of work done, results obtained,
-lessons learned and other remarks. Can also include lists and
-links:
+Gjensidige is a leading Nordic insurance group listed on the Oslo Stock Exchange.
 
-* First item
+* Developed a machine learning based pricing model that on average was 20% better at predicting the risk of a
+customer compared to the current model employed by Gjensidige
 
-* Item with [link](http://www.example.com). Links will work both in
-  the html and pdf versions.
+* Currently working on a binary classifier to predict whether an existing customer is likely to buy new insurance
+products to boost additional sales
 
-**That Other Job You Had**
+* Built web scraping applications to collect large amounts of data to aid the CRM team
 
-Also with a short description.
+* Create reports using SQL/SAS on a monthly basis, and communicate results across different departments of
+Gjensidige
+
+**Formula Student**
+
+One of the largest engineering competitions in the world, where university teams design, build and compete with
+small scale race cars.
+
+* Developed and implemented path planning algorithms for the driverless system of the car
+
+*  Worked together with 10+ other members in a startup-like environment
+
+*  Collaborated with academic experts in the field to ensure our line of attack was feasible
+
+*  Qualified to the most reputable race at Hockenheimring in Germany
 
 Technical Experience
 --------------------
