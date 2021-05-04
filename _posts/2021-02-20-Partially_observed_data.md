@@ -53,7 +53,7 @@ And even though the sum can tell us something about the values of the dice (if
 the sum is low, each dice rolled low), it does not affect the rolls. The true graph
 is thus
 
-  <img src="https://samueltober.github.io/samuel-tober/images/diagram-20210504.png" >
+ &nbsp&nbsp&nbsp&nbsp<img src="https://samueltober.github.io/samuel-tober/images/diagram-20210504.png" >
 
 In this case, the sum is deterministic given the dice rolls, but the same reasoning
 would go for a random variable. Imagine that we don’t know the probabilities
