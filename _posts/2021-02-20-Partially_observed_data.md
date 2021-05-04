@@ -128,5 +128,7 @@ level. To summarise, our original setup was not MCAR or MAR,
 but by adding more variables, we achieved MAR, which is feasible to
 work with.
 
+The two cases can be drawn as in the graph below. In  the  first  case,  contentment  is  not  asked  for  and  thus  not  given,  this  means  that  grade and disclose are not d-separated (See left figure).  In the second case, grade and disclose are d-separated given contentment (See right figure).
+
 <img src="https://samueltober.github.io/samuel-tober/images/Grades.png" >
 
