@@ -18,7 +18,13 @@ can be represented as a directed graph and a table-CPD (conditional probability
 distribution) for each node. Each node represents a variable, and a directed edge
 from node A to node B means that the value of B depends directly on the value
 of A. In this case, A would be called a parent of B. Each variable can assume a
-finite set of discrete values (e.g. {0, 1}, {a0, a1, a2}), and to fully specify the
+finite set of discrete values (e.g. $${0, 1}$$, $${a_0, a_1, a_2}$$), and to fully specify the
 Bayesian network we need to know the probability of each value given the values
 of parent nodes. These are stated in a table, an example of which is given below,
 where A is the only parent of B.
+
+|      | B = 0         | B = 1         |
+|      | ------------- |:-------------:| 
+|A = 0 | 0.3           | 0.7           | 
+|A = 1 | 0.8           | 0.2           | 
+
