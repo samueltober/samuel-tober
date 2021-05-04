@@ -26,6 +26,9 @@ menu:
   - title: 'About'
     url: '/about'
     type: 'about'
+  - title: 'CV'
+    url: '/CV'
+    type: 'CV'
 
 # Owner/author information
 owner:
