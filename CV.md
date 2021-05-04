@@ -71,7 +71,7 @@ on Gjensidige’s home insurance data set
 
 Researched the possibility of using a video camera and image processing in Matlab to measure blood pressure non-invasively. The project was carried out at KTH School of Technology and Health.
 
-Report available at: [report](https://static1.squarespace.com/static/56b6357e01dbaea0266fe701/t/
+Report available [**here**](https://static1.squarespace.com/static/56b6357e01dbaea0266fe701/t/
 580b8f70bebafb59fd876eb1/1477152642082/Samuel+Tober.pdf)
 
 Programming Languages
