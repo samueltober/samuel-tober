@@ -1,7 +1,7 @@
 ---
 layout: dark-post
 title:  "Partially Observed Data"
-date:   2021-02-20 21:49:05 +0200
+date:   2021-04-30 21:49:05 +0200
 categories: Projects
 usemathjax: true
 ---
