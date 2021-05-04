@@ -23,8 +23,8 @@ Bayesian network we need to know the probability of each value given the values
 of parent nodes. These are stated in a table, an example of which is given below,
 where A is the only parent of B.
 
-|      | B = 0         | B = 1         |
-|      | ------------- |:-------------:| 
-|A = 0 | 0.3           | 0.7           | 
-|A = 1 | 0.8           | 0.2           | 
+|               | B = 0           | B = 1         |
+|:-------------:| :-------------: |:-------------:| 
+|A = 0          | 0.3             | 0.7           | 
+|A = 1          | 0.8             | 0.2           | 
 
