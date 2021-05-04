@@ -104,3 +104,29 @@ coins, A and B, and every time B shows “head” we don’t record the value of
 Clearly, this is MAR but not MCAR. Sometimes, we can make the data MAR
 by adding more variables.
 
+Let's illustrate this with an example.
+## Example
+Imagine that we send out a survey to students after a course finished.
+One question is what grade they received, with one possible answer
+being “prefer not to say”. We can see this as a sort of missing data,
+so we need to think about how we can deal with it. Maybe we have
+reason to believe that disclosing the grade or not is not independent of the actual grade (students who get a lower grade may be less
+inclined to tell it). Thus, we can’t ignore these answers, since that
+would bias our results to high grades. However, it might be that
+the grade itself is not the deciding factor, but rather a student is
+likely to reveal his or her grade if he or she is happy with the result.
+That is, it is not the grade itself that is important, but actually the
+contentment level of the student (how happy the student is with the
+result). Formally, we have that the probability for disclosing the
+grade or not is independent of the grade given the contentment level.
+By adding this information as a question in the survey (“how happy
+are you with your grade?”), we get data that is MAR, for which we
+can use techniques to learn the parameter. Now we can infer from
+the data the probabilities of being content given a certain grade, and
+the probability to disclose the grade given a certain contentment
+level. To summarise, our original setup was not MCAR or MAR,
+but by adding more variables, we achieved MAR, which is feasible to
+work with.
+
+<img src="https://samueltober.github.io/samuel-tober/images/Grades.png" >
+
