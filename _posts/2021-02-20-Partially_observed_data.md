@@ -151,3 +151,58 @@ variables, and get:
     l(\theta, D) = \sum_{\text{D}} \log{p(\text{Sum}, A|\theta)} = \sum_{\text{D}} \log{(\sum_{B}p(\text{Sum}|A, B, \theta)p(A|\theta)p(B|\theta))}
 \end{equation}
 
+This is a much harder problem, since now the parameters for different parts are
+coupled and can not be learned separately. In fact, the number of summations
+we need to do is exponential in the number of missing values, which makes this
+approach intractable for large problems. The function will typically not be convex
+or unimodal anymore, and so one alternative is to use gradient based methods
+to iteratively find a (local) maximum. Here, we will instead use expectation
+maximization.
+
+# Expectation Maximization
+Expecation maximization, or EM, is an iterative algorithm to find maximum
+likelihood estimates - which is exactly what we are trying to do here! The idea
+is quite simple. First, we note that the difficulty arose since we were trying to
+learn parameters with missing values, which is generally difficult, since we need
+to sum over all cases to compute the likelihood. However, if we somehow knew
+the missing values, then the solution is easily found in one step. Similarly, if we
+knew the parameters, then we could easily estimate the missing values, or even
+find the probabilities for all possible values. EM thus works in two steps, where
+in the first step we assume that the parameters are known, and in the second we
+assume that the values are known. So, if we have some guess for the parameters,
+we can do these two steps to get a new estimate. It can be proved that these
+two steps will always lead to a better estimate (unless, of course, we are at a
+local maximum), and so by repeating them we can iteratively get an estimate of
+the parameters that is a local maximum of the log likelihood.
+
+Why is it called expectations maximization? To understand the name, let’s study
+the two steps in more detail.
+
+## E-step
+The E-step assumes that we have an estimate of the parameters, $$\theta^{(t)}$$.
+The goal is to use these to compute the probability for all the missing
+values. More precisely, we need to compute the expected sufficient
+statistics. If you are not familiar with the concept, you can think of
+these as some values that fully summarise the data. For example,
+if we want to fit a Gaussian distribution with 500 data points, we don’t actually need to keep the individual points - all we need is the
+sample mean and variance of the points. In the case of table-CPDs,
+the sufficient statistics are the number of occurrences for each (value,
+value of parents) tuple, i.e. one value for each cell in the tables. The
+expected number of occurrences of (A = a, Pa(A) = u) given $$\theta^{(t)}$$
+can be computed as
+
+\begin{equation}
+    M_{\theta^{(t)}}[a, u] = \sum_{\text{D}}p(a, u|D, \theta^{(t)})
+\end{equation}
+
+Of course, some nodes do not have parent nodes, but we use the same
+notation and simply ignore the u. To do this efficiently, we need a
+good way to compute the joint probability, for example with messagepassing.
+However, for the small networks in this tutorial, we can get
+by with a more naive approach where we compute each probability
+individually. The $$M_{\theta^{(t)}}$$ are the expected sufficient statistics, which
+motivates the name.
+
+
+## M-step
+
