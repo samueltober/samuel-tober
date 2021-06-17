@@ -61,7 +61,7 @@ CNNs suit themselves best to solving problems where the input data is in the for
 ### CNN Architecture
 CNNs consists of three types of layers: Convolutional layers, pooling layers and fully connected layers. I will not go into great technical detail of the different layers as there already is a plethora of great resources to read up on the specifics of CNNs, instead I will just offer a brief overview. Firstly, the convolutional layers consist of a number of filters, and perform convolutions of the input tensor and these filters, producing a 2d activation map. Thus the network learns filters that activate when stimulated by certain features in the input. Secondly, the pooling layers act as a form of regularization by progressively decreasing the size of the representations, the number of parameters, the memory usage and hence also helps in mitigating overfitting. Finally, the cascade of pooling and convolutional layers is fed into a fully connected layer that computes the final activations, and in our case, comptues the probabilities of the diferent classes through a softmax function. For a illustration of a typical CNN architecture, see the image below.
 
-<img src="https://samueltober.github.io/my-blog/assets/images/architecture.png" >
+<img src="https://samueltober.github.io/my-blog/samuel-toberimages/architecture.png" >
 
 ## Training the CNN
 
