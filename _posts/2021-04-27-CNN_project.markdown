@@ -21,7 +21,7 @@ Before I get into details on CNNs and network optimization, let us have a look a
 
 This is what the raw data will look like. Note how each country has a unique label and when we train the network we will train it on the country labels instead of the country name. Let's look at the distribution of classes in the data set:
 
-<img src="https://samueltober.github.io/my-blog/assets/images/dist.png" >
+<img src="https://samueltober.github.io/my-blog/images/dist.png" >
 
 Clearly the data set is not balanced, how this affects the network's performance and how it can be mitigated, is something we will come back to later. 
 
