@@ -2,7 +2,7 @@
 layout: dark-post
 title:  "Time Series Modelling with Prophet"
 date:   2021-06-20 15:00:00 +0200
-categories: Data Science
+categories: Data-Science
 ---
 
 Recently I have been working on time series modelling for demand prediction, a very useful but indeed difficult task. After doing some research on the topic, and experimenting with different models, I stumbled upon the out-of-box model Prophet, developed and maintained by Facebook. Motivated by its ease of use, and impressive performance, I decided to give it a try. This article will be focused on how Prophet works, why it is such an appealing model, and how you can get started with Prophet on your own time series problems. 
